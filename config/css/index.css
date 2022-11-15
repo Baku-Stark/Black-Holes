@@ -1,4 +1,10 @@
 @charset "UTF-8";
+/*CONFIGURAÇÃO [FONTES]*/
+@font-face {
+  font-family: "H2";
+  src: url("../font/BEYNO.otf") format("opentype");
+}
+/*CONFIGURAÇÃO [FONTES]*/
 /*VARIÁVEIS [CORES]*/
 /*VARIÁVEIS [CORES]*/
 /*CONFIGURAÇÃO [ELEMENTS HTML5]*/
@@ -7,6 +13,14 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Helvetica", sans-serif;
+}
+
+h2.section-h2 {
+  font-size: 5em;
+  margin-top: 10px;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4745098039);
+  color: #5500c4;
+  font-family: "H2";
 }
 
 /*CONFIGURAÇÃO [ELEMENTS HTML5]*/
@@ -75,10 +89,13 @@ aside.aside-layer p {
 }
 
 /*CONFIGURAÇÃO [MAIN]*/
-/*CONFIGURAÇÃO [SECTION > MAIN-SECTION]*/
-section.first-content {
+/*CONFIGURAÇÃO [SECTION > FIRST-SECTION]*/
+.section-content {
   width: 100%;
   height: 100vh;
+}
+
+section.first-content {
   display: flex;
   color: #111111;
   background-color: #f0f8ff;
@@ -121,7 +138,17 @@ section.first-content li a:visited {
   color: #1B1A40;
 }
 
-/*CONFIGURAÇÃO [SECTION > MAIN-SECTION]*/
+/*CONFIGURAÇÃO [SECTION > FIRST-SECTION]*/
+/*CONFIGURAÇÃO [SECTION > PHOTOS-SECTION]*/
+section.photos-content {
+  width: 100%;
+  height: 50vh;
+  background-color: #111111;
+}
+
+/*CONFIGURAÇÃO [SECTION > PHOTOS-SECTION]*/
+/*CONFIGURAÇÃO [SECTION > SECOND-SECTION]*/
+/*CONFIGURAÇÃO [SECTION > SECOND-SECTION]*/
 /*CONFIGURAÇÃO [FOOTER]*/
 footer.cabecalho {
   max-width: 100%;
