@@ -1,18 +1,20 @@
-var slideLeft = {
-    reset: true,
+/*============================================================*/
+/*CONFIGURAÇÃO [SLIDE]*/
+var slide1 = {
     distance: '150%',
-    origin: 'left',
-    duration: 1550,
-    opacity: 0
-};
-
-var slideContent = {
-    reset: true,
-    distance: '150%',
-    origin: 'right',
+    origin: 'bottom',
     duration: 1000,
     opacity: 0
 };
 
-ScrollReveal().reveal('.logo-bp', slideLeft);
+var slideContent = {
+    distance: '150%',
+    origin: 'top',
+    duration: 1000,
+    opacity: 0
+};
+
+ScrollReveal().reveal('.slide', slide1);
 ScrollReveal().reveal('.slideContent', slideContent);
+/*CONFIGURAÇÃO [SLIDE]*/
+/*============================================================*/
