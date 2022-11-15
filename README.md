@@ -13,7 +13,7 @@
 
 [❌] - About 'Black Panther: Wakanda Forever'
 
-[❌] - Project Developer
+[❌] - About the project
 
 <br>
 
