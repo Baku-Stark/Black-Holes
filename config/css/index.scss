@@ -20,7 +20,13 @@ $linkHover: #D96AC6;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Helvetica', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+.section-content{
+    width: 100%;
+    height: 100vh;
+    background-color: $backgroundSecond;
 }
 
 h2.section-h2{
@@ -84,12 +90,6 @@ aside.aside-layer p{
 /*CONFIGURAÇÃO [MAIN]*/
 
 /*CONFIGURAÇÃO [SECTION > FIRST-SECTION]*/
-.section-content{
-    width: 100%;
-    height: 100vh;
-    background-color: $backgroundSecond;
-}
-
 section.first-content{
     display: flex;
     color: $letterColor2;
@@ -151,6 +151,12 @@ div.photos-desc-div{
 div.photos-desc{
     padding: 50px 10px;
     color: $letterColor;
+    animation: pulse 5s infinite ease-in-out;
+}
+
+@keyframes pulse{
+    0%, 100%{text-shadow: 5px 5px 5px rgba(77, 0, 128, 0.8)}
+    50% {text-shadow: 5px 5px 5px rgba(77, 0, 128, 0.185);}
 }
 
 div.section-carousel{
@@ -165,6 +171,40 @@ img.picture-carousel{
 /*CONFIGURAÇÃO [SECTION > SECOND-SECTION]*/
 
 /*CONFIGURAÇÃO [SECTION > SECOND-SECTION]*/
+
+/*CONFIGURAÇÃO [fourth-content > Desenvolvimento do projeto]*/
+div.fourth-content{
+    width: 100%;
+    height: 82.5vh;
+    display: flex;
+}
+
+div.fourth-content > article, div.fourth-content > aside{
+    width: 50%;
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img.picture-chadwick{
+    width: 70%;
+    height: 70vh;
+    border-radius: 50%;
+}
+
+div.fourth-content > aside{
+    flex-direction: column;
+}
+
+div.fourth-content > aside p{
+    font-size: 1em;
+}
+
+div.fourth-content > aside p > span{
+    font-style: italic;
+}
+/*CONFIGURAÇÃO [fourth-content > Desenvolvimento do projeto]*/
 
 /*CONFIGURAÇÃO [FOOTER]*/
 footer.cabecalho{
