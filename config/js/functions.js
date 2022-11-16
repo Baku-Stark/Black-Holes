@@ -1,6 +1,6 @@
 /*============================================================*/
 /*CONFIGURAÇÃO [SLIDE]*/
-var slide1 = {
+var slideBot = {
     distance: '150%',
     origin: 'bottom',
     duration: 1000,
@@ -14,7 +14,7 @@ var slideContent = {
     opacity: 0
 };
 
-ScrollReveal().reveal('.slide', slide1);
+ScrollReveal().reveal('.slideBot', slideBot);
 ScrollReveal().reveal('.slideContent', slideContent);
 /*CONFIGURAÇÃO [SLIDE]*/
 /*============================================================*/
