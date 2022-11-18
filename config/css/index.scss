@@ -1,4 +1,4 @@
-@import '../scss/_variables.scss';
+@import '../scss/_variables.scss', '../scss/_cards.scss';
 
 /*CONFIGURAÇÃO [FONTES]*/
 @font-face {
@@ -164,19 +164,24 @@ img.picture-carousel{
 div.second-content-image{
     padding-top: 50px;
     display: flex;
+    align-items: center;
     justify-content: center;
 }
 
 img.banner-personas{
-    width: 90%;
+    width: 75%;
     height: 90vh;
 }
 
 section.personas-content{
     display: flex;
+
     article, aside{
         width: 50%;
         height: 90vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 /*CONFIGURAÇÃO [second-content > Personagens]*/

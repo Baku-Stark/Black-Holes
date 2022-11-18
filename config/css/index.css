@@ -1,8 +1,129 @@
 @charset "UTF-8";
-/* CONFIGURAÇÃO [CORES] */
-/* CONFIGURAÇÃO [CORES] */
-/* CONFIGURAÇÃO [FLEX-CENTER] */
-/* CONFIGURAÇÃO [FLEX-CENTER] */
+/*CONFIGURAÇÃO [second-content > cards]*/
+div.card-persona {
+  max-width: 360px;
+  border-radius: 20px;
+  display: flex;
+  cursor: pointer;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #f0f8ff;
+  background-color: #111111;
+}
+div.card-persona div.image-banner-persona {
+  opacity: 0.7;
+  width: 360px;
+  height: 200px;
+  font-size: 25px;
+  border-radius: 20px 20px 0 0;
+  display: flex;
+  font-style: italic;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all 0.5s ease-in-out;
+}
+div.card-persona div.image-banner-persona h3.name-persona {
+  font-size: 50px;
+  filter: blur(100px);
+  text-shadow: 1px 1px 0 #111111;
+  color: #5500c4;
+  font-family: "H2";
+  transition: all 0.3s ease-in-out;
+}
+div.card-persona div.content-persona {
+  height: 0;
+  opacity: 0;
+  padding: 0 20px;
+  overflow: hidden;
+  transform: translateY(30px);
+  transition: all 0.5s ease-in-out;
+}
+div.card-persona span.title-persona {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+div.card-persona p.desc-persona {
+  padding: 5px;
+}
+div.card-persona div.arrow-down-up {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+div.image-banner-persona.n1 {
+  background-image: url("../images/TChalla.jfif");
+}
+
+div.image-banner-persona.n2 {
+  background-image: url("../images/Shuri.jfif");
+}
+
+div.image-banner-persona.n3 {
+  background-image: url("../images/Okoye.jfif");
+}
+
+div.image-banner-persona.n4 {
+  background-position: center top;
+  background-image: url("../images/Nakia.jfif");
+}
+
+div.image-banner-persona.n5 {
+  background-position: center center;
+  background-image: url("../images/MBaku.jfif");
+}
+
+div.image-banner-persona.n6 {
+  background-position: center center;
+  background-image: url("../images/Namor.jfif");
+}
+
+div.card-persona:hover > div.image-banner-persona {
+  width: 400px;
+}
+
+div.card-persona:hover > div.image-banner-persona > h3.name-persona {
+  filter: blur(0);
+  transition: all 0.3s ease-in-out;
+}
+
+div.card-persona:hover > div.content-persona {
+  opacity: 1;
+  height: 260px;
+  padding: 10px 10px;
+  overflow-y: scroll;
+  transform: translateY(0);
+}
+
+div.card-persona:hover > div.content-persona::-webkit-scrollbar-thumb {
+  background-color: #3b3b3b;
+  border-radius: 20px;
+}
+
+div.card-persona:hover > div.content-persona::-webkit-scrollbar-track {
+  background: #111111;
+}
+
+div.card-persona:hover > div.content-persona::-webkit-scrollbar {
+  width: 10px;
+}
+
+div.card-persona:hover > div.content-persona::-webkit-scrollbar-thumb {
+  background-color: #3b3b3b;
+  border-radius: 20px;
+}
+
+div.card-persona:hover > div.arrow-down-up {
+  transform: rotate(-180deg);
+  transition: all 0.3s ease-in-out;
+}
+
+/*CONFIGURAÇÃO [second-content > cards]*/
 /*CONFIGURAÇÃO [FONTES]*/
 @font-face {
   font-family: "H2";
@@ -191,11 +312,12 @@ img.picture-carousel {
 div.second-content-image {
   padding-top: 50px;
   display: flex;
+  align-items: center;
   justify-content: center;
 }
 
 img.banner-personas {
-  width: 90%;
+  width: 75%;
   height: 90vh;
 }
 
@@ -205,6 +327,9 @@ section.personas-content {
 section.personas-content article, section.personas-content aside {
   width: 50%;
   height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /*CONFIGURAÇÃO [second-content > Personagens]*/
