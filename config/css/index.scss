@@ -1,19 +1,11 @@
+@import '../scss/_variables.scss';
+
 /*CONFIGURAÇÃO [FONTES]*/
 @font-face {
     font-family: 'H2';
     src: url('../font/BEYNO.otf') format('opentype');
 }
 /*CONFIGURAÇÃO [FONTES]*/
-
-/*VARIÁVEIS [CORES]*/
-$backgroundPrime: #111111;
-$backgroundSecond: #f0f8ff;
-$letterColor: #f0f8ff;
-$letterColor2: #111111;
-$Title: #5500c4;
-$subTitle: #1B1A40;
-$linkHover: #D96AC6;
-/*VARIÁVEIS [CORES]*/
 
 /*CONFIGURAÇÃO [ELEMENTS HTML5]*/
 *{
@@ -27,14 +19,14 @@ $linkHover: #D96AC6;
     width: 100%;
     height: 100vh;
     background-color: $backgroundSecond;
-}
-
-h2.section-h2{
-    font-size: 5em;
-    padding-top: 10px;
-    text-shadow: 3px 3px 10px #00000079;
-    color: $Title;
-    font-family: 'H2';
+    
+    h2.section-h2{
+        font-size: 5em;
+        padding-top: 25px;
+        text-shadow: 3px 3px 10px #00000079;
+        color: $Title;
+        font-family: 'H2';
+    }
 }
 /*CONFIGURAÇÃO [ELEMENTS HTML5]*/
 
@@ -168,9 +160,30 @@ img.picture-carousel{
 }
 /*CONFIGURAÇÃO [SECTION > PHOTOS-SECTION]*/
 
-/*CONFIGURAÇÃO [SECTION > SECOND-SECTION]*/
+/*CONFIGURAÇÃO [second-content > Personagens]*/
+div.second-content-image{
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+}
 
-/*CONFIGURAÇÃO [SECTION > SECOND-SECTION]*/
+img.banner-personas{
+    width: 90%;
+    height: 90vh;
+}
+
+section.personas-content{
+    display: flex;
+    article, aside{
+        width: 50%;
+        height: 90vh;
+    }
+}
+/*CONFIGURAÇÃO [second-content > Personagens]*/
+
+/*CONFIGURAÇÃO [third-content > Wakanda Para Sempre]*/
+/*CONFIGURAÇÃO [third-content > Wakanda Para Sempre]*/
+
 
 /*CONFIGURAÇÃO [fourth-content > Desenvolvimento do projeto]*/
 div.fourth-content{

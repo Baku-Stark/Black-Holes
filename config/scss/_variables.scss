@@ -1,0 +1,19 @@
+/* CONFIGURAÇÃO [CORES] */
+$backgroundPrime: #111111;
+$backgroundSecond: #f0f8ff;
+$letterColor: #f0f8ff;
+$letterColor2: #111111;
+$Title: #5500c4;
+$subTitle: #1B1A40;
+$linkHover: #D96AC6;
+/* CONFIGURAÇÃO [CORES] */
+
+
+/* CONFIGURAÇÃO [FLEX-CENTER] */
+@mixin flexCenter($flex-direction, $justify-content){
+    display: flex;
+    align-items: center;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+}
+/* CONFIGURAÇÃO [FLEX-CENTER] */
