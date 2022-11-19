@@ -18,3 +18,27 @@ $linkHover: #442066;
     display: $display;
     cursor: pointer;
 }
+
+@mixin screen-desktop{
+    @media screen and (min-width: 1200px){
+        @content;
+    }
+}
+
+@mixin screen992px{
+    @media screen and (max-width: 992px){
+        @content;
+    }
+}
+
+@mixin screen780px{
+    @media screen and (max-width: 780px){
+        @content;
+    }
+}
+
+@mixin screen480px{
+    @media screen and (max-width: 480px){
+        @content;
+    }
+}

@@ -124,28 +124,28 @@ div.card-persona:hover > div.arrow-down-up {
 }
 
 /*CONFIGURAÇÃO [second-content > cards]*/
-@media (max-width: 920px) {
+@media screen and (max-width: 992px) {
   /*CONFIGURAÇÃO [BODY]*/
   body {
     overflow: hidden;
   }
   /*CONFIGURAÇÃO [BODY]*/
   /*CONFIGURAÇÃO [NAVBAR]*/
-  h1.navbar-title {
+  nav.nav-bar h1.navbar-title {
     font-size: 1.5em;
   }
-  div.mobile-menu {
+  nav.nav-bar div.mobile-menu {
     display: block;
     cursor: pointer;
   }
-  ul.links-nav-bar {
+  nav.nav-bar ul.links-nav-bar {
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: space-around;
     top: 9.5vh;
     right: 0;
-    width: 50vw;
+    width: 55vw;
     height: 92vh;
     position: absolute;
     background-color: rgba(0, 0, 0, 0.8352941176);
@@ -153,13 +153,13 @@ div.card-persona:hover > div.arrow-down-up {
             backdrop-filter: blur(20px);
     transition: transform 0.3s ease-in-out;
   }
-  ul.links-nav-bar li.link-item {
+  nav.nav-bar ul.links-nav-bar li.link-item {
     margin-left: 0;
   }
-  ul.links-nav-bar li.link-item a {
+  nav.nav-bar ul.links-nav-bar li.link-item a {
     font-size: 2.5em;
   }
-  ul.links-nav-bar.active {
+  nav.nav-bar ul.links-nav-bar.active {
     transform: translateX(0);
   }
   @-webkit-keyframes navLinkFade {

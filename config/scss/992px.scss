@@ -1,6 +1,4 @@
-@import '../scss/_variables.scss', '../css/index.scss';
-
-@media (max-width: 920px){
+@include screen992px{
     /*CONFIGURAÇÃO [BODY]*/
     body{
         overflow: hidden;
@@ -14,14 +12,14 @@
         }
         
         div.mobile-menu{
-            @include mobile-menu(block)
+            @include mobile-menu(block);
         }
     
         ul.links-nav-bar{
             @include flexCenter(column);
             top: 9.5vh;
             right: 0;
-            width: 50vw;
+            width: 55vw;
             height: 92vh;
             position: absolute;
             background-color: #000000d5;
