@@ -1,4 +1,4 @@
-@import '../scss/_variables.scss', '../scss/_cards.scss';
+@import '../scss/_variables.scss', '../scss/_cards.scss', '../scss/920px.scss';
 
 /*CONFIGURAÇÃO [FONTES]*/
 @font-face {
@@ -18,17 +18,75 @@
 .section-content{
     width: 100%;
     height: 100vh;
+    padding: 30px 80px;
     background-color: $backgroundSecond;
     
     h2.section-h2{
         font-size: 5em;
         padding-top: 25px;
         text-shadow: 3px 3px 10px #00000079;
-        color: $Title;
+        color: $subTitle;
         font-family: 'H2';
     }
 }
 /*CONFIGURAÇÃO [ELEMENTS HTML5]*/
+
+/*CONFIGURAÇÃO [NAVBAR]*/
+nav.nav-bar{
+    @include flexCenter(inherit);
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    position: fixed;
+    background-color: #000000;
+    
+    img.navbar-logo{
+        width: 90px;
+        height: 45px;
+    }
+
+    h1.navbar-title{
+        font-size: 2.5em;
+        color: $Title;
+        font-family: 'H2';
+    }
+
+    div.mobile-menu{
+        @include mobile-menu(none);
+        div{
+            width: 32px;
+            height: 2px;
+            margin: 8px;
+            background-color: $backgroundSecond;
+        }
+    }
+
+    ul.links-nav-bar{
+        display: flex;
+        list-style: none;
+        align-items: center;
+        justify-content: space-evenly;
+        li.link-item{
+            margin-left: 10px;
+            a{
+                font-size: 1.2rem;
+                text-decoration: none;
+                color: $letterColor;
+                font-family: 'Impact', sans-serif;
+                transition: .3s ease-in-out;
+                &:hover{
+                    color: $linkHover;
+                    transition: .3s ease-in-out;
+                }
+            }
+        }
+
+        li.link-item:nth-child(1){
+            margin-left: 0;
+        }
+    }
+}
+/*CONFIGURAÇÃO [NAVBAR]*/
 
 /*CONFIGURAÇÃO [MAIN]*/
 main{
@@ -187,6 +245,38 @@ section.personas-content{
 /*CONFIGURAÇÃO [second-content > Personagens]*/
 
 /*CONFIGURAÇÃO [third-content > Wakanda Para Sempre]*/
+div.cine-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    article.cine-content2, aside.cine-content2{
+        width: 50%;
+        height: 75vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+    article.cine-content2 img{
+        width: 50%;
+        height: 60vh;
+    }
+    article.cine-content2 span{
+        font-size: 14px;
+        font-weight: bold;
+    }
+}
+
+div.logo-block-div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    div.logo-block, img{
+        width: 100px;
+        height: 100px;
+    }
+}
 /*CONFIGURAÇÃO [third-content > Wakanda Para Sempre]*/
 
 

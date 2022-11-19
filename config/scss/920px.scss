@@ -1,0 +1,49 @@
+@import '../scss/_variables.scss', '../css/index.scss';
+
+@media (max-width: 920px){
+    /*CONFIGURAÇÃO [BODY]*/
+    body{
+        overflow: hidden;
+    }
+    /*CONFIGURAÇÃO [BODY]*/
+
+    /*CONFIGURAÇÃO [NAVBAR]*/
+    nav.nav-bar{
+        h1.navbar-title{
+            font-size: 1.5em;
+        }
+        
+        div.mobile-menu{
+            @include mobile-menu(block)
+        }
+    
+        ul.links-nav-bar{
+            @include flexCenter(column);
+            top: 9.5vh;
+            right: 0;
+            width: 50vw;
+            height: 92vh;
+            position: absolute;
+            background-color: #000000d5;
+            backdrop-filter: blur(20px);
+            transition: transform .3s ease-in-out;
+            
+            li.link-item{
+                margin-left: 0;
+                a{
+                    font-size: 2.5em;
+                }
+            }
+        }
+    
+        ul.links-nav-bar.active{
+            transform: translateX(0);
+        }
+    
+        @keyframes navLinkFade{
+            from{opacity: 0; transform: translateX(50px);}
+            to{opacity: 1; transform: translateX(0);}
+        }
+    }
+    /*CONFIGURAÇÃO [NAVBAR]*/
+}
