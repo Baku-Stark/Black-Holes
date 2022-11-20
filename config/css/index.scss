@@ -1,11 +1,10 @@
-@import "../scss/_variables.scss', '../scss/_cards.scss', '../scss/992px.scss";
+@import '../scss/_variables.scss', '../scss/_cards.scss', '../scss/_navbar.scss';
 
-/*CONFIGURAÇÃO [FONTES]*/
 @font-face {
     font-family: 'H2';
     src: url('../font/BEYNO.otf') format('opentype');
 }
-/*CONFIGURAÇÃO [FONTES]*/
+
 
 /*CONFIGURAÇÃO [ELEMENTS HTML5]*/
 *{
@@ -27,66 +26,18 @@
         text-shadow: 3px 3px 10px #00000079;
         color: $subTitle;
         font-family: 'H2';
+        @include screen992px{
+            font-size: 3em;
+        }
+        @include screen780px{
+            font-size: 2.5em;
+        }
+        @include screen480px{
+            font-size: 2em;
+        }
     }
 }
 /*CONFIGURAÇÃO [ELEMENTS HTML5]*/
-
-/*CONFIGURAÇÃO [NAVBAR]*/
-nav.nav-bar{
-    @include flexCenter(inherit);
-    top: 0;
-    width: 100%;
-    z-index: 999;
-    position: fixed;
-    background-color: #000000;
-    
-    img.navbar-logo{
-        width: 90px;
-        height: 45px;
-    }
-
-    h1.navbar-title{
-        font-size: 2.5em;
-        color: $Title;
-        font-family: 'H2';
-    }
-
-    div.mobile-menu{
-        @include mobile-menu(none);
-        div{
-            width: 32px;
-            height: 2px;
-            margin: 8px;
-            background-color: $backgroundSecond;
-        }
-    }
-
-    ul.links-nav-bar{
-        display: flex;
-        list-style: none;
-        align-items: center;
-        justify-content: space-evenly;
-        li.link-item{
-            margin-left: 10px;
-            a{
-                font-size: 1.2rem;
-                text-decoration: none;
-                color: $letterColor;
-                font-family: 'Impact', sans-serif;
-                transition: .3s ease-in-out;
-                &:hover{
-                    color: $linkHover;
-                    transition: .3s ease-in-out;
-                }
-            }
-        }
-
-        li.link-item:nth-child(1){
-            margin-left: 0;
-        }
-    }
-}
-/*CONFIGURAÇÃO [NAVBAR]*/
 
 /*CONFIGURAÇÃO [MAIN]*/
 main{
@@ -103,85 +54,130 @@ div.layer{
     display: flex;
     background-color: #000000b2;
     backdrop-filter: blur(5px);
-}
 
-article.article-layer, aside.aside-layer{
-    width: 50%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-}
+    article.article-layer, aside.aside-layer{
+        width: 50%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
 
-article.article-layer > img.logo-bp{
-    width: 75%;
-    animation: float 3s infinite;
-}
+        img.logo-bp{
+            width: 75%;
+            animation: float 3s infinite;
+        }
 
-@keyframes float{
-    0%, 100%{transform: translateY(0);}
-    50%{transform: translateY(50px);}
-}
+        @keyframes float{
+            0%, 100%{transform: translateY(0);}
+            50%{transform: translateY(50px);}
+        }
 
-aside.aside-layer a{
-    font-weight: bold;
-    text-decoration: none;
-    color: $Title;
-}
+        a{
+            font-weight: bold;
+            text-decoration: none;
+            color: $Title;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
 
-aside.aside-layer a:hover{
-    text-decoration: underline;
-}
-
-aside.aside-layer p{
-    margin-bottom: 0;
-    text-shadow: 3px 3px 10px #000000d7;
-    color: $letterColor;
+        p{
+            margin-bottom: 0;
+            text-shadow: 3px 3px 10px #000000d7;
+            color: $letterColor;
+            @include screen480px{
+                font-size: 0.85em;
+                text-align: left;
+            }
+        }
+    }
 }
 /*CONFIGURAÇÃO [MAIN]*/
 
 /*CONFIGURAÇÃO [SECTION > FIRST-SECTION]*/
 section.first-content{
     display: flex;
-    color: $letterColor2;
+    width: 100%;
+    height: 100vh;
     background-color: $backgroundSecond;
-}
+    @include screen992px{
+        @include flexCenter(column, center);
+    }
 
-section > article, section > aside{
-    width: 50%;
-    display: flex;
+    article{
+        @include flexBasic(center);
+        width: 50%;
+        @include screen992px{
+            width: 100%;
+        }
 
-}
+        iframe{
+            width: 560px;
+            height: 315px;
+            @include screen480px{
+                width: 600px;
+            }
+        }
+    }
+    
+    aside{
+        width: 50%;
+        margin: 0 0 0 20px;
+        @include flexBasic(space-evenly);
+        @include screen992px{
+            width: 100%;
+            margin: 20px 0 0 0;
+        }
+        @include screen480px{
+            font-size: 0.85em;
+        }
 
-section > article{
-    align-items: center;
-    justify-content: center;
-}
+        div.text-aside{
+            width: 50%;
+            padding: 5px;
+            p{
+                font-size: 1em;
+                @include screen992px{
+                    font-size: 0.8em;
+                }
+                @include screen780px{
+                    font-size: 0.7em;
+                }
+            }
+        }
 
-section > aside{
-    justify-content: center;
-}
-
-section.first-content > aside{
-    text-align: left;
-    flex-direction: column;
-}
-
-section.first-content ul{
-    list-style: none;
-}
-
-section.first-content li a{
-    font-weight: bold;
-    text-decoration: none;
-    color: $Title;
-}
-
-section.first-content li a:hover{
-    text-decoration: underline;
-}
-
-section.first-content li a:visited{
-    color: $subTitle;
+        div.list-aside{
+            width: 50%;
+            @include screen992px{
+                margin-left: 20px;
+            }
+            ul{
+                list-style: none;
+                @include screen480px{
+                    font-size: 0.65em;
+                }
+                li{
+                    @include screen780px{
+                        font-size: 1em;
+                    }
+                    @include screen480px{
+                        font-size: 0.95em;
+                    }
+                    a{
+                        font-weight: bold;
+                        text-decoration: none;
+                        color: $Title;
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                        &:visited{
+                            color: $subTitle;
+                        }
+                    }
+                }
+        
+            }
+        }
+    }
 }
 /*CONFIGURAÇÃO [SECTION > FIRST-SECTION]*/
 
@@ -191,30 +187,42 @@ section.photos-content{
     height: 50vh;
     display: flex;
     background-color: $backgroundPrime;
-}
 
-div.photos-desc-div{
-    width: 25%;
-    height: 50vh;
-}
-
-div.photos-desc{
-    padding: 50px 10px;
-    color: $letterColor;
-    animation: pulse 5s infinite ease-in-out;
-}
-
-@keyframes pulse{
-    0%, 100%{text-shadow: 5px 5px 5px rgba(77, 0, 128, 0.8)}
-    50% {text-shadow: 5px 5px 5px rgba(77, 0, 128, 0.185);}
-}
-
-div.section-carousel{
-    width: 50%;
-}
-
-img.picture-carousel{
-    height: 20.55rem;
+    div.photos-desc-div{
+        width: 25%;
+        height: 50vh;
+        @include screen480px{
+            display: none;
+        }
+    }
+    
+    div.photos-desc{
+        padding: 50px 10px;
+        color: $letterColor;
+        animation: pulse 5s infinite ease-in-out;
+        @include screen992px{
+            font-size: 0.7em;
+        }
+    }
+    
+    @keyframes pulse{
+        0%, 100%{text-shadow: 5px 5px 5px rgba(77, 0, 128, 0.8)}
+        50% {text-shadow: 5px 5px 5px rgba(77, 0, 128, 0.185);}
+    }
+    
+    div.section-carousel{
+        width: 50%;
+        @include screen480px{
+            width: 100%;
+        }
+    }
+    
+    img.picture-carousel{
+        height: 20.55rem;
+        @include screen992px{
+            height: 20.20rem;
+        }
+    }
 }
 /*CONFIGURAÇÃO [SECTION > PHOTOS-SECTION]*/
 
@@ -285,86 +293,128 @@ div.fourth-content{
     width: 100%;
     height: 82.5vh;
     display: flex;
-}
+    article{
+        width: 50%;
+        height: 75vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include screen780px{
+            display: none;
+        }
+    img.picture-chadwick{
+        width: 70%;
+        height: 70vh;
+        border-radius: 50%;
+        @include screen992px{
+            height: 50vh;
+            }
+        }
+    }
 
-div.fourth-content > article, div.fourth-content > aside{
-    width: 50%;
-    height: 75vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+    aside{
+        width: 50%;
+        height: 75vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        @include screen780px{
+            width: 100%;
+        }
 
-img.picture-chadwick{
-    width: 70%;
-    height: 70vh;
-    border-radius: 50%;
-}
-
-div.fourth-content > aside{
-    flex-direction: column;
-}
-
-div.fourth-content > aside p{
-    font-size: 1em;
-}
-
-div.fourth-content > aside p > span{
-    font-style: italic;
+        p{
+            font-size: 1em;
+            @include screen992px{
+                font-size: 0.95em;
+            }
+            @include screen780px{
+                font-size: 0.9em;
+            }
+            @include screen480px{
+                font-size: 0.75em;
+            }
+        }
+    
+        span{
+            font-style: italic;
+        }
+    } 
 }
 /*CONFIGURAÇÃO [fourth-content > Desenvolvimento do projeto]*/
 
 /*CONFIGURAÇÃO [FOOTER]*/
 footer.cabecalho{
-    max-width: 100%;
-    max-height: 40vh;
+    width: 100%;
+    height: 40vh;
     display: flex;
     color: $letterColor;
     background-color: $backgroundPrime;
-}
 
-footer > article, footer > aside{
-    width: 50%;
-    height: 40vh;
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-
-div.article-top p{
-    font-size: 1.7em;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-
-div.article-bot{
-    display: flex;
-    justify-content: center;
-}
-
-article.article-bot a{
-    text-decoration: none;
-}
-
-i.badget{
-    font-size: 1.7em;
-    margin: 0 8px 0 8px;
-    width: fit-content;
-    color: $letterColor;
-    &:hover{
-        cursor: pointer;
-        background-image: linear-gradient(to right, $Title, $subTitle);
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
+    article, aside{
+        width: 50%;
+        @include flexCenter(column, space-evenly);
     }
-}
 
-div.aside-top img{
-    height: 8rem;
-}
+    div.article-top{
+        p{
+            font-size: 1.7em;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            @include screen992px{
+                font-size: 1.5em;
+            }
+            @include screen780px{
+                font-size: 1em;
+            }
+            @include screen480px{
+                font-size: 0.9em;
+            }
+        }
+    }
+    
+    div.article-bot{
+        display: flex;
+        justify-content: center;
+        a{
+            text-decoration: none;
+            i.badget{
+                font-size: 1.7em;
+                margin: 0 8px 0 8px;
+                width: fit-content;
+                color: $letterColor;
+                &:hover{
+                    cursor: pointer;
+                    background-image: linear-gradient(to right, $Title, $subTitle);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    color: transparent;
+                }
+            }
+        }
+    }
 
-div.aside-bot p{
-    font-style: italic;
+    div.aside-top{
+        img{
+            height: 8rem;
+            @include screen480px{
+                height: 3.5rem;
+            }
+        }
+    }
+
+    div.aside-bot{
+        p{
+            font-style: italic;
+            @include screen992px{
+                font-size: 0.9em;
+            }
+            @include screen780px{
+                font-size: 0.7em;
+            }
+            @include screen480px{
+                font-size: 0.6em;
+            }
+        }
+    }
 }
 /*CONFIGURAÇÃO [FOOTER]*/

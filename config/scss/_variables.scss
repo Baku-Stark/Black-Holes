@@ -6,12 +6,17 @@ $Title: #5500c4;
 $subTitle: #1B1A40;
 $linkHover: #442066;
 
+@mixin flexBasic($justify-content){
+    display: flex;
+    align-items: center;
+    justify-content: $justify-content;
+}
 
-@mixin flexCenter($flex-direction){
+@mixin flexCenter($flex-direction, $justify-content){
     display: flex;
     align-items: center;
     flex-direction: $flex-direction;
-    justify-content: space-around;
+    justify-content: $justify-content;
 }
 
 @mixin mobile-menu($display){
