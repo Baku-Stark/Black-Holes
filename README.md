@@ -1,5 +1,6 @@
 # ⬛ | Black-Panther
 > **Project about the superhero Black Panther, Marvel Studios.**
+> **Projeto sobre o super-herói Panter Negra, Marvel Estúdios.**
 
 *EN-USA*
 > The release of the feature "Black Panther: Wakanda Forever" arrived in theaters and I decided to make a project about the nucleus of the king of Wakanda, a powerful African nation.
@@ -23,7 +24,7 @@
 
 <br>
 
-[❌] - About 'Black Panther: Wakanda Forever'
+[✔️] - About 'Black Panther: Wakanda Forever'
 > Extra information section, director's opinion and interviews.
 
 >Seção de informações extras, opinião do diretor e entrevistas.
