@@ -124,12 +124,12 @@ div.card-persona:hover > div.arrow-down-up {
 }
 
 /*CONFIGURAÇÃO [second-content > cards]*/
-/*CONFIGURAÇÃO [NAVBAR]*/
-body {
-  scroll-behavior: smooth;
-  /*CONFIGURAÇÃO [NAVBAR]*/
+body.black-panther {
+  background-color: #f0f8ff;
 }
-body nav.nav-bar {
+
+/*CONFIGURAÇÃO [NAVBAR]*/
+nav.nav-bar {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -139,54 +139,54 @@ body nav.nav-bar {
   position: fixed;
   background-color: #000000;
 }
-body nav.nav-bar img.navbar-logo {
+nav.nav-bar img.navbar-logo {
   width: 90px;
   height: 45px;
 }
-body nav.nav-bar h1.navbar-title {
+nav.nav-bar h1.navbar-title {
   font-size: 2.5em;
   color: #5500c4;
   font-family: "H2";
 }
 @media screen and (max-width: 992px) {
-  body nav.nav-bar h1.navbar-title {
+  nav.nav-bar h1.navbar-title {
     font-size: 2em;
   }
 }
 @media screen and (max-width: 780px) {
-  body nav.nav-bar h1.navbar-title {
+  nav.nav-bar h1.navbar-title {
     font-size: 1.8em;
   }
 }
 @media screen and (max-width: 480px) {
-  body nav.nav-bar h1.navbar-title {
+  nav.nav-bar h1.navbar-title {
     font-size: 1.5em;
   }
 }
-body nav.nav-bar div.mobile-menu {
+nav.nav-bar div.mobile-menu {
   display: none;
   cursor: pointer;
 }
-body nav.nav-bar div.mobile-menu div {
+nav.nav-bar div.mobile-menu div {
   width: 32px;
   height: 2px;
   margin: 8px;
   background-color: #f0f8ff;
 }
 @media screen and (max-width: 992px) {
-  body nav.nav-bar div.mobile-menu {
+  nav.nav-bar div.mobile-menu {
     display: block;
     cursor: pointer;
   }
 }
-body nav.nav-bar ul.nav-bar-list {
+nav.nav-bar ul.nav-bar-list {
   list-style: none;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
 @media screen and (max-width: 992px) {
-  body nav.nav-bar ul.nav-bar-list {
+  nav.nav-bar ul.nav-bar-list {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -203,11 +203,11 @@ body nav.nav-bar ul.nav-bar-list {
     transition: transform 0.3s ease-in-out;
   }
 }
-body nav.nav-bar ul.nav-bar-list li.link-item {
+nav.nav-bar ul.nav-bar-list li.link-item {
   margin-left: 30px;
 }
 @media screen and (max-width: 992px) {
-  body nav.nav-bar ul.nav-bar-list li.link-item {
+  nav.nav-bar ul.nav-bar-list li.link-item {
     opacity: 0;
     margin-left: 0;
   }
@@ -232,31 +232,32 @@ body nav.nav-bar ul.nav-bar-list li.link-item {
     }
   }
 }
-body nav.nav-bar ul.nav-bar-list li.link-item a {
+nav.nav-bar ul.nav-bar-list li.link-item a {
   font-size: 1.2rem;
   text-decoration: none;
   color: #f0f8ff;
   font-family: "Impact", sans-serif;
   transition: 0.3s ease-in-out;
 }
-body nav.nav-bar ul.nav-bar-list li.link-item a:hover {
+nav.nav-bar ul.nav-bar-list li.link-item a:hover {
   color: #442066;
   transition: 0.3s ease-in-out;
 }
 @media screen and (max-width: 992px) {
-  body nav.nav-bar ul.nav-bar-list li.link-item a {
+  nav.nav-bar ul.nav-bar-list li.link-item a {
     font-size: 1.7em;
   }
 }
-body nav.nav-bar ul.nav-bar-list li.link-item:nth-child(1) {
+nav.nav-bar ul.nav-bar-list li.link-item:nth-child(1) {
   margin-left: 0;
 }
 @media screen and (max-width: 992px) {
-  body nav.nav-bar ul.nav-bar-list.active {
+  nav.nav-bar ul.nav-bar-list.active {
     transform: translateX(0);
   }
 }
 
+/*CONFIGURAÇÃO [NAVBAR]*/
 @font-face {
   font-family: "H2";
   src: url("../font/BEYNO.otf") format("opentype");
@@ -266,6 +267,7 @@ body nav.nav-bar ul.nav-bar-list li.link-item:nth-child(1) {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
   font-family: "Poppins", sans-serif;
 }
 
@@ -274,6 +276,11 @@ body nav.nav-bar ul.nav-bar-list li.link-item:nth-child(1) {
   height: 100vh;
   padding: 30px 80px;
   background-color: #f0f8ff;
+}
+@media screen and (max-width: 480px) {
+  .section-content {
+    padding: 30px 20px;
+  }
 }
 .section-content h2.section-h2 {
   font-size: 5em;
@@ -529,7 +536,7 @@ section.photos-content img.picture-carousel {
 }
 @media screen and (max-width: 992px) {
   section.photos-content img.picture-carousel {
-    height: 20.2rem;
+    height: 19.65rem;
   }
 }
 
@@ -546,9 +553,31 @@ img.banner-personas {
   width: 75%;
   height: 90vh;
 }
+@media screen and (max-width: 780px) {
+  img.banner-personas {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  img.banner-personas {
+    height: 45vh;
+  }
+}
 
 section.personas-content {
   display: flex;
+}
+@media screen and (max-width: 780px) {
+  section.personas-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+  section.personas-content:last-child {
+    margin-bottom: 0;
+  }
 }
 section.personas-content article, section.personas-content aside {
   width: 50%;
@@ -557,6 +586,12 @@ section.personas-content article, section.personas-content aside {
   align-items: center;
   justify-content: center;
 }
+@media screen and (max-width: 780px) {
+  section.personas-content article, section.personas-content aside {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+}
 
 /*CONFIGURAÇÃO [second-content > Personagens]*/
 /*CONFIGURAÇÃO [third-content > Wakanda Para Sempre]*/
@@ -564,22 +599,57 @@ div.cine-content {
   display: flex;
   align-items: center;
   justify-content: center;
+  /*CARTAZ PANTERA NEGRA*/
 }
 div.cine-content article.cine-content2, div.cine-content aside.cine-content2 {
   width: 50%;
   height: 75vh;
   display: flex;
+  text-align: center;
   align-items: center;
   flex-direction: column;
   justify-content: center;
+}
+@media screen and (max-width: 780px) {
+  div.cine-content article.cine-content2, div.cine-content aside.cine-content2 {
+    width: 100%;
+    height: 75vh;
+  }
 }
 div.cine-content article.cine-content2 img {
   width: 50%;
   height: 60vh;
 }
-div.cine-content article.cine-content2 span {
-  font-size: 14px;
+@media screen and (max-width: 780px) {
+  div.cine-content article.cine-content2 img {
+    width: 100%;
+    height: 50vh;
+  }
+}
+div.cine-content article.cine-content2 span.cine-title-movie {
+  font-size: 2em;
   font-weight: bold;
+}
+@media screen and (max-width: 780px) {
+  div.cine-content article.cine-content2 span.cine-title-movie {
+    font-size: 1em;
+  }
+}
+@media screen and (max-width: 480px) {
+  div.cine-content article.cine-content2 span.cine-title-movie {
+    font-size: 0.9em;
+  }
+}
+div.cine-content article.cine-content2 p {
+  font-size: 1.5em;
+}
+div.cine-content article.cine-content2 p span {
+  font-weight: bold;
+}
+@media screen and (max-width: 480px) {
+  div.cine-content article.cine-content2 p {
+    font-size: 0.9em;
+  }
 }
 
 div.logo-block-div {
@@ -587,10 +657,17 @@ div.logo-block-div {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  /*MARCAS DE CINEMA*/
 }
 div.logo-block-div div.logo-block, div.logo-block-div img {
   width: 100px;
   height: 100px;
+}
+@media screen and (max-width: 780px) {
+  div.logo-block-div div.logo-block, div.logo-block-div img {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 /*CONFIGURAÇÃO [third-content > Wakanda Para Sempre]*/

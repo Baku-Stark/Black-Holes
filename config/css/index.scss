@@ -11,6 +11,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -19,7 +20,9 @@
     height: 100vh;
     padding: 30px 80px;
     background-color: $backgroundSecond;
-    
+    @include screen480px{
+        padding: 30px 20px;
+    }
     h2.section-h2{
         font-size: 5em;
         padding-top: 25px;
@@ -220,7 +223,7 @@ section.photos-content{
     img.picture-carousel{
         height: 20.55rem;
         @include screen992px{
-            height: 20.20rem;
+            height: 19.65rem;
         }
     }
 }
@@ -237,10 +240,23 @@ div.second-content-image{
 img.banner-personas{
     width: 75%;
     height: 90vh;
+    @include screen780px{
+        width: 100%;
+    }
+    @include screen480px{
+        height: 45vh;
+    }
 }
 
 section.personas-content{
     display: flex;
+    @include screen780px{
+        @include flexCenter(column, center);
+        margin-bottom: 50px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
 
     article, aside{
         width: 50%;
@@ -248,6 +264,10 @@ section.personas-content{
         display: flex;
         align-items: center;
         justify-content: center;
+        @include screen780px{
+            width: 100%;
+            margin-bottom: 50px;
+        }
     }
 }
 /*CONFIGURAÇÃO [second-content > Personagens]*/
@@ -261,17 +281,44 @@ div.cine-content{
         width: 50%;
         height: 75vh;
         display: flex;
+        text-align: center;
         align-items: center;
         flex-direction: column;
         justify-content: center;
+        @include screen780px{
+            width: 100%;
+            height: 75vh;
+        }
     }
+    /*CARTAZ PANTERA NEGRA*/
     article.cine-content2 img{
         width: 50%;
         height: 60vh;
+        @include screen780px{
+            width: 100%;
+            height: 50vh;
+        }
     }
-    article.cine-content2 span{
-        font-size: 14px;
-        font-weight: bold;
+    article.cine-content2{
+        span.cine-title-movie{
+            font-size: 2em;
+            font-weight: bold;
+            @include screen780px{
+                font-size: 1em;
+            }
+            @include screen480px{
+                font-size: 0.9em;
+            }
+        }
+        p{
+            font-size: 1.5em;
+            span{
+                font-weight: bold;
+            }
+            @include screen480px{
+                font-size: 0.9em;
+            }
+        }
     }
 }
 
@@ -280,9 +327,14 @@ div.logo-block-div{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    /*MARCAS DE CINEMA*/
     div.logo-block, img{
         width: 100px;
         height: 100px;
+        @include screen780px{
+            width: 50px;
+            height: 50px;
+        }
     }
 }
 /*CONFIGURAÇÃO [third-content > Wakanda Para Sempre]*/
