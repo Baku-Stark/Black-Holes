@@ -24,8 +24,8 @@ $linkHover: #442066;
     cursor: pointer;
 }
 
-@mixin screen-desktop{
-    @media screen and (min-width: 1200px){
+@mixin screen1200px{
+    @media screen and (max-width: 1250px){
         @content;
     }
 }

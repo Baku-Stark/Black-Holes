@@ -328,6 +328,7 @@ div.layer article.article-layer, div.layer aside.aside-layer {
   height: 100vh;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 div.layer article.article-layer img.logo-bp, div.layer aside.aside-layer img.logo-bp {
   width: 75%;
@@ -398,12 +399,12 @@ section.first-content article {
   }
 }
 section.first-content article iframe {
-  width: 560px;
+  width: 550px;
   height: 315px;
 }
 @media screen and (max-width: 480px) {
   section.first-content article iframe {
-    width: 600px;
+    width: 410px;
   }
 }
 section.first-content aside {
@@ -534,6 +535,11 @@ section.photos-content div.section-carousel {
 section.photos-content img.picture-carousel {
   height: 20.55rem;
 }
+@media screen and (max-width: 1250px) {
+  section.photos-content img.picture-carousel {
+    height: 19.6rem;
+  }
+}
 @media screen and (max-width: 992px) {
   section.photos-content img.picture-carousel {
     height: 19.65rem;
@@ -604,11 +610,11 @@ div.cine-content {
 div.cine-content article.cine-content2, div.cine-content aside.cine-content2 {
   width: 50%;
   height: 75vh;
-  display: flex;
   text-align: center;
+  display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
 }
 @media screen and (max-width: 780px) {
   div.cine-content article.cine-content2, div.cine-content aside.cine-content2 {
@@ -627,7 +633,7 @@ div.cine-content article.cine-content2 img {
   }
 }
 div.cine-content article.cine-content2 span.cine-title-movie {
-  font-size: 2em;
+  font-size: 1.1em;
   font-weight: bold;
 }
 @media screen and (max-width: 780px) {
@@ -667,6 +673,33 @@ div.logo-block-div div.logo-block, div.logo-block-div img {
   div.logo-block-div div.logo-block, div.logo-block-div img {
     width: 50px;
     height: 50px;
+  }
+}
+
+div.cine-content-section {
+  width: 100%;
+  height: 100vh;
+  background-color: aqua;
+}
+
+div.info-container {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+div.info-container p {
+  font-size: 1em;
+}
+@media screen and (max-width: 780px) {
+  div.info-container p {
+    font-size: 0.65em;
+  }
+}
+@media screen and (max-width: 480px) {
+  div.info-container p {
+    font-size: 0.7em;
   }
 }
 
@@ -717,12 +750,12 @@ div.fourth-content aside p {
 }
 @media screen and (max-width: 992px) {
   div.fourth-content aside p {
-    font-size: 0.95em;
+    font-size: 0.8em;
   }
 }
 @media screen and (max-width: 780px) {
   div.fourth-content aside p {
-    font-size: 0.9em;
+    font-size: 0.75em;
   }
 }
 @media screen and (max-width: 480px) {
