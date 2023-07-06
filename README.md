@@ -1,44 +1,35 @@
-# ⬛ | Black-Panther
-> **Project about the superhero Black Panther, Marvel Studios.**
-> **Projeto sobre o super-herói Panter Negra, Marvel Estúdios.**
+# ⬛ | Buracos Negros - Stephen Hawking
 
 *EN-USA*
-> The release of the feature "Black Panther: Wakanda Forever" arrived in theaters and I decided to make a project about the nucleus of the king of Wakanda, a powerful African nation.
+> A tribute to theoretical physicist Stephen Hawking, who died in 2018, a brilliant man of enormous potential in the scientific field.
 
 *PT-BR*
-> O lançamento do longa "Pantera Negra: Wakanda Para Sempre" chegou aos cinemas e resolvi fazer um projeto sobre o núcleo do rei de Wakanda, poderosa nação africana.
+> Uma homenagem ao físico teórico Stephen Hawking, falecido em 2018, homem brilhante de enorme potêncial no campo científico.
 
-#
+<hr>
 
-[✔️] - Home
-> Initial part of the project, where the user will find the trailer for 'Black Panther: Wakanda Forever', plot and information about the film.
+**[✔️] - Sobre Stephen Hawking**
 
-> Parte inicial do projeto, onde o usuário vai encontrar o trailer de 'Pantera Negra: Wakanda Para Sempre', enredo e informações sobre o filme.
+> Initial part of the project, where the user will find the initial information of Stephen Hawking.
 
-<br>
-
-[✔️] - Characters
-> Black Panther core character cards section.
-
-> Seção de cartões dos personagens do núcleo do Pantera Negra.
+> Parte inicial do projeto, onde o usuário vai encontrar as informações iniciais de Stephen Hawking.
 
 <br>
 
-[✔️] - About 'Black Panther: Wakanda Forever'
-> Extra information section, director's opinion and interviews.
+**[✔️] - Sobre Buracos Negros**
 
->Seção de informações extras, opinião do diretor e entrevistas.
+> Information about Black Holes.
 
-<br>
-
-[✔️] - About the project
->Final part of the project where I make a small mention about the late actor Chadwick Boseman.
-
->Parte final do projeto onde faço uma pequena menção sobre o ator falecido Chadwick Boseman.
+> Informaçoes sobre os Buracos Negros.
 
 <br>
 
-# ⬛ | Technologies used
+**[✔️] - Livros Escritos**
+> Stephen Hawking book section.
+
+> Seção de livros do Stephen Hawking.
+
+# ⬛ | Technologies Used
 
 <table>
     <tr>

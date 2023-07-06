@@ -1,0 +1,42 @@
+table{
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+    tr{
+        border: 1px solid $aliceBlue;
+        text-align: center;
+    }
+    thead{
+        text-align: center;
+        tr > th{
+            padding: 20px;
+            font-size: 1.2em;
+            color: $aliceBlue;
+            background-color: $lightBlack;
+            @include screen480px{
+                font-size: 1em;
+            }
+        }
+    }
+    tbody{
+        tr > td{
+            padding: 20px;
+            color: #ffffff7a;
+            border: 1px solid $aliceBlue;
+            img.book-cape{
+                width: 170px;
+                height: 165px;
+            }
+        }
+        tr > td.title{
+            font-weight: bold;
+            color: $lightGreen;
+        }
+        tr > td a{
+            color: $Gray;
+        }
+        tr:nth-child(2n){
+            background-color: $lightBlack
+        }
+    }
+}

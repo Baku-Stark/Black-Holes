@@ -1,0 +1,39 @@
+$Black: #000;
+$Gray: #363636;
+$lightBlack: #111111;
+$aliceBlue: #f0f8ff;
+$darkGreen: #00536b;
+$oceanGreen: #00b9a1;
+$lightGreen: #c5fb88;
+
+$gradientHover: #00536b, #00b9a1;
+
+
+$trans-02: 0.2s ease-in-out;
+$trans-03: 0.3s ease-in-out;
+$trans-04: 0.4s ease-in-out;
+$trans-05: 0.5s ease-in-out;
+
+@mixin displayNormal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin displayPersonal($justify-content){
+    display: flex;
+    align-items: center;
+    justify-content: $justify-content;
+}
+
+@mixin screen999px{
+    @media screen and (max-width: 999px){
+        @content;
+    }
+}
+
+@mixin screen480px{
+    @media screen and (max-width: 480px){
+        @content;
+    }
+}

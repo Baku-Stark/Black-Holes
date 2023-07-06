@@ -1,0 +1,98 @@
+@import 'variables.scss', 'footer.scss', 'main.scss', 'table.scss';
+
+@font-face {
+    font-family: 'OuterLimits';
+    src: url('../font/SFOuterLimits.ttf') format("truetype");
+} 
+
+/* CONFIG. [gerais] */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: $lightGreen;
+    &:hover{
+        color: $oceanGreen;
+        text-decoration: underline;
+    }
+}
+
+p{
+    color: $aliceBlue;
+}
+
+hr.divider-line{
+    margin: 30px 0 30px 0;
+}
+
+.pad-square{
+    padding: 50px 50px;
+    @include screen999px{
+        padding: 50px 20px;
+    }
+    @include screen480px{
+        padding: 50px 10px;
+    }
+}
+
+.pad-retan{
+    padding: 20px 80px;
+    @include screen480px{
+        padding: 20px 10px;
+    }
+}
+
+.section-content-main.set-1{
+    background-color: $Black;
+    h2{
+        color: $darkGreen;
+    }
+}
+
+.section-content-main.set-2{
+    background-color: $lightBlack;
+    h2{
+        color: $oceanGreen;
+    }
+}
+
+h2.title-section-content{
+    font-size: 3em;
+    font-family: 'OuterLimits';
+    @include screen480px{
+        font-size: 2em;
+    }
+}
+
+.content-row{
+    p{
+        opacity: 0.7;
+        font-size: 1em;
+        @include screen480px{
+            font-size: 0.8em;
+        }
+    }
+}
+
+.block-4{
+    @include displayNormal;
+}
+
+ul.list-black-holes li{
+    color: #f0f8ff49;
+}
+
+img.img-content{
+    width: 25vw;
+    height: 50vh;
+    @include screen480px{
+        width: 100%;
+        height: 100%;
+    }
+}

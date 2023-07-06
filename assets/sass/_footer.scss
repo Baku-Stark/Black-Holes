@@ -1,0 +1,83 @@
+footer{
+    color: $aliceBlue;
+    background-color: $lightBlack;
+    .config-footer{
+        text-align: center;
+        @include displayNormal;
+        @include screen480px{
+            margin-bottom: 50px;
+        }
+        h3.footer-title{
+            font-size: 2rem;
+            font-family: 'OuterLimits';
+            @include screen999px{
+                font-size: 1rem;
+            }
+            
+        }
+        div.divider-line{
+            width: 2px;
+            height: 60px;
+            background-color: #ffffff62;
+            margin: 0 20px 0 20px;
+        }
+        p.footer-text{
+            font-size: 1em;
+            color: #ffffffa6;
+            @include screen999px{
+                font-size: 0.9em;
+            }
+            @include screen480px{
+                font-size: 0.9em;
+            }
+        }
+        article{
+            margin-left: 10px;
+            a{
+                font-size: 1.5em;
+                margin-left: 15px;
+                color: $aliceBlue;
+                @include screen480px{
+                    font-size: 1.5em;
+                    margin-left: 5px;
+                }
+                &:hover{
+                    cursor: pointer;
+                    background-image: linear-gradient(to right, $gradientHover);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    color: transparent;
+                    transition: .3s ease-in-out;
+                }
+            }
+        }
+    }
+    .footer-span{
+        font-weight: bold;
+    }
+    li{
+        color: #ffffffa6;
+        a{
+            font-size: 0.9em;
+            color: #ffffffa6;
+            &:hover{
+                cursor: pointer;
+                color: #ffffffa6;
+                text-decoration: underline;
+            }
+        }
+    }
+    .config-footer-2{
+        text-align: left;
+        p.footer-text{
+            font-size: 1em;
+            color: #ffffffa6;
+            @include screen999px{
+                font-size: 0.9em;
+            }
+            @include screen480px{
+                font-size: 0.8em;
+            }
+        }
+    }
+}
